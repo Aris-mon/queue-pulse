@@ -1,0 +1,33 @@
+HPE LOGO UPDATE - V10.20.25
+================================
+
+This update is based on the uploaded V10.12.1 GetSyncState Fix project.
+
+Changes:
+1. Main application/sidebar uses static/images/hpe-logo.gif.
+2. Login page now also uses static/images/hpe-logo.gif.
+3. Both locations use the same complete animated HPE logo.
+4. Added dedicated GIF logo CSS so legacy circular logo styles cannot override it.
+5. Added dark-mode transparency overrides.
+6. No database, email monitoring, PDL, team-management, sync, or AI logic was changed.
+
+Files changed:
+- templates/base.html
+- templates/login.html
+- static/css/hpe_logo.css
+- static/css/theme_logo_fix.css
+- HPE_LOGO_UPDATE.txt
+
+Existing animated asset retained:
+- static/images/hpe-logo.gif
+
+Run:
+    python app.py
+
+If the old logo is cached:
+    Ctrl + F5
+
+The existing 3-frame HPE GIF is used; no backend dependency is required.
+
+
+V10.20.25 adds the final hpe_logo_patch.css override and cache-busting for the canonical transparent HPE artwork.

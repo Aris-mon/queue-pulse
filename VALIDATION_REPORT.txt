@@ -1,0 +1,17 @@
+PDL V10.20.27 validation report
+===============================
+
+Validated in the build sandbox:
+- Python syntax compilation: PASS
+  ai/rag.py, ai/graph.py, ai/engine.py, ai/training.py, db.py, server.py, app.py, tools/check_local_rag.py
+- Jinja template syntax: PASS (all templates)
+- CSV sample parser and label normalization: PASS
+- RECOGNITION label consistency normalization: PASS
+- LangGraph-unavailable linear fallback receives RAG context: PASS
+- RAG fingerprint synchronization using simulated Chroma collection: PASS
+  * indexes new operational training example
+  * indexes new uploaded training sample
+  * removes stale legacy collection ID
+  * detects and updates label-only edits
+
+The sandbox has no outbound package-download access, so a clean pip installation of the external runtime dependencies could not be executed here. The package includes setup_local_rag.ps1 and tools/check_local_rag.py so the target Windows/Python 3.11 host can install and verify the actual runtime dependencies, local embedding model, Chroma store, Ollama endpoint, and qwen3:8b model.

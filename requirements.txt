@@ -1,0 +1,21 @@
+# Python 3.11 recommended for the Windows deployment.
+# setup_local_rag.ps1 installs this complete file into .venv.
+Flask==3.1.1
+Flask-Login==0.6.3
+Flask-SQLAlchemy==3.1.1
+SQLAlchemy==2.0.41
+python-dotenv==1.1.0
+APScheduler==3.11.0
+psycopg[binary]==3.2.10
+
+msal>=1.31.0
+requests>=2.32.0
+
+cryptography>=43.0.0
+
+# Local AI orchestration / retrieval (no cloud service required)
+# sentence-transformers installs PyTorch/Transformers and Hugging Face Hub transitively.
+langgraph>=1.0,<2.0
+chromadb>=1.0,<2.0
+sentence-transformers>=5.0,<6.0
+
